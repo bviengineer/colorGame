@@ -9,7 +9,8 @@ var colors = [
 
 var colorSquares = document.querySelectorAll(".square"),
 pcSelectedColor = colors[3],
-colorValueInSpan = document.getElementById("color-in-span");
+colorValueInSpan = document.getElementById("color-in-span"),
+resultsDisplay = document.querySelector("#message");
 
 //Updates the name of the color after the correct guess
 colorValueInSpan.textContent = pcSelectedColor;
@@ -25,7 +26,8 @@ for(var i = 0; i < colorSquares.length; i++){
         if(userSelectedColor === pcSelectedColor){
             alert("You are correct")
         } else {
-            alert("WRONG!");
+            this.style.backgroundColor = "#232323";
+            resultsDisplay.textContent = "Try Again"
         }
         console.log(userSelectedColor);
         // this.style.background
