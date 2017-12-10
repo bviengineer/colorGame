@@ -24,12 +24,19 @@ for(var i = 0; i < colorSquares.length; i++){
         var userSelectedColor = this.style.backgroundColor;
       
         if(userSelectedColor === pcSelectedColor){
-            alert("You are correct")
+            resultsDisplay.textContent = "Correct"
+            changeColors(userSelectedColor);
         } else {
             this.style.backgroundColor = "#232323";
             resultsDisplay.textContent = "Try Again"
         }
         console.log(userSelectedColor);
-        // this.style.background
     });
+}
+
+//function will loop through the squares/divs and set each of their background color to the correctly guessed color
+function changeColors(color){
+    for(var i = 0; i < colorSquares.length; i++){
+        colorSquares[i].style.backgroundColor = color;
+    }
 }
