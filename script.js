@@ -7,8 +7,15 @@ resultsDisplay = document.querySelector("#message"),
 h1 = document.querySelector("h1"),
 resetButton = document.getElementById("reset-button");
 
+//reset button
 resetButton.addEventListener("click", function(){
-    
+    colors = generateRandomColors(6);
+    colorValueInSpan.textContent = "RGB";
+    h1.style.backgroundColor = "#232323";
+    pcSelectedColor = chooseColor();
+    for(var i = 0; i < colorSquares.length; i++){
+        colorSquares[i].style.backgroundColor = colors[i];
+    }
 });
 
 //Updates the name of the color after the correct guess
@@ -42,7 +49,7 @@ function changeColors(color){
     }
 }
 
-//function will randomly pick a color from the colors array
+//function will generate a random number to be used in selecting a color from the colors array
 function chooseColor(){
     var randomColorSelection = Math.floor(Math.random()* colors.length);
     return colors[randomColorSelection];
