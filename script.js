@@ -4,7 +4,12 @@ var colorSquares = document.querySelectorAll(".square"),
 pcSelectedColor = chooseColor(),
 colorValueInSpan = document.getElementById("color-in-span"),
 resultsDisplay = document.querySelector("#message"),
-h1 = document.querySelector("h1");
+h1 = document.querySelector("h1"),
+resetButton = document.getElementById("reset-button");
+
+resetButton.addEventListener("click", function(){
+    
+});
 
 //Updates the name of the color after the correct guess
 // colorValueInSpan.textContent = pcSelectedColor;
