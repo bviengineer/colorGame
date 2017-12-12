@@ -12,6 +12,8 @@ resetButton.addEventListener("click", function(){
     colors = generateRandomColors(6);
     colorValueInSpan.textContent = "RGB";
     h1.style.backgroundColor = "#232323";
+    resultsDisplay.textContent = "";
+    resetButton.textContent = "New Colors";
     pcSelectedColor = chooseColor();
     for(var i = 0; i < colorSquares.length; i++){
         colorSquares[i].style.backgroundColor = colors[i];
@@ -31,6 +33,7 @@ for(var i = 0; i < colorSquares.length; i++){
       
         if(userSelectedColor === pcSelectedColor){
             resultsDisplay.textContent = "Correct"
+            resetButton.textContent = "Play Again?"
             h1.style.backgroundColor = userSelectedColor;
             colorValueInSpan.textContent = pcSelectedColor;
             changeColors(userSelectedColor);
