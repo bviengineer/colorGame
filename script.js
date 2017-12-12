@@ -8,12 +8,12 @@ var colors = [
 ];
 
 var colorSquares = document.querySelectorAll(".square"),
-pcSelectedColor = colors[3],
+pcSelectedColor = chooseColor(),
 colorValueInSpan = document.getElementById("color-in-span"),
 resultsDisplay = document.querySelector("#message");
 
 //Updates the name of the color after the correct guess
-colorValueInSpan.textContent = pcSelectedColor;
+// colorValueInSpan.textContent = pcSelectedColor;
 
 for(var i = 0; i < colorSquares.length; i++){
     //assigns a color to each square
@@ -25,6 +25,7 @@ for(var i = 0; i < colorSquares.length; i++){
       
         if(userSelectedColor === pcSelectedColor){
             resultsDisplay.textContent = "Correct"
+            colorValueInSpan.textContent = pcSelectedColor;
             changeColors(userSelectedColor);
         } else {
             this.style.backgroundColor = "#232323";
@@ -40,3 +41,8 @@ function changeColors(color){
         colorSquares[i].style.backgroundColor = color;
     }
 }
+//function will randomly pick a color from the colors array
+    function chooseColor(){
+        var randomColorSelection = Math.floor(Math.random()* colors.length);
+        return colors[randomColorSelection];
+    }
