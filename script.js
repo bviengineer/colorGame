@@ -9,6 +9,16 @@ resetButton = document.getElementById("reset-button"),
 easyButton = document.getElementById("easy-button"),
 hardButton = document.getElementById("hard-button");
 
+//easy button
+easyButton.addEventListener("click", function(){
+    
+});
+
+//hard button
+hardButton.addEventListener("click", function(){
+    
+});
+
 //reset button
 resetButton.addEventListener("click", function(){
     colors = generateRandomColors(6);
