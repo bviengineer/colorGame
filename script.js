@@ -5,7 +5,9 @@ pcSelectedColor = chooseColor(),
 colorValueInSpan = document.getElementById("color-in-span"),
 resultsDisplay = document.querySelector("#message"),
 h1 = document.querySelector("h1"),
-resetButton = document.getElementById("reset-button");
+resetButton = document.getElementById("reset-button"),
+easyButton = document.getElementById("easy-button"),
+hardButton = document.getElementById("hard-button");
 
 //reset button
 resetButton.addEventListener("click", function(){
