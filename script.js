@@ -1,5 +1,6 @@
 //variables
-var colors = generateRandomColors(6),
+var numSquares = 6,
+colors = generateRandomColors(numSquares),
 colorSquares = document.querySelectorAll(".square"),
 pcSelectedColor = chooseColor(),
 colorValueInSpan = document.getElementById("color-in-span"),
@@ -12,8 +13,9 @@ hardButton = document.getElementById("hard-button");
 //easy button
 easyButton.addEventListener("click", function(){
     hardButton.classList.remove("selected");
-    easyButton.classList.add("selected");    
-    colors = generateRandomColors(3);
+    easyButton.classList.add("selected"); 
+    numSquares = 3;   
+    colors = generateRandomColors(numSquares);
     pcSelectedColor = chooseColor();
     for(var i = 0; i < colorSquares.length; i++){
         if(colors[i]){
@@ -27,12 +29,21 @@ easyButton.addEventListener("click", function(){
 //hard button
 hardButton.addEventListener("click", function(){
     easyButton.classList.remove("selected");
-    hardButton.classList.add("selected");    
+    hardButton.classList.add("selected");   
+    numSquares = 6; 
+    colors = generateRandomColors(numSquares);
+    pcSelectedColor = chooseColor();
+    for(var i = 0; i < colorSquares.length; i++){
+        if(colors[i]){
+            colorSquares[i].style.backgroundColor = colors[i];
+            colorSquares[i].style.display = "block";
+        }
+    }
 });
 
 //reset button
 resetButton.addEventListener("click", function(){
-    colors = generateRandomColors(6);
+    colors = generateRandomColors(numSquares);
     colorValueInSpan.textContent = "RGB";
     h1.style.backgroundColor = "#232323";
     resultsDisplay.textContent = "";
