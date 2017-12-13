@@ -21,10 +21,16 @@ body {
 h1{
     color: white;
     text-align: center;
+    line-height: 1.1;
+    padding: 20px 0;
     background-color: steelblue;
     margin: 0;
     font-weight: normal;
     text-transform: uppercase;
+}
+
+#color-in-span {
+    font-size: 200%;
 }
 
 #info-bar {
