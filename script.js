@@ -45,7 +45,7 @@ hardButton.addEventListener("click", function(){
 resetButton.addEventListener("click", function(){
     colors = generateRandomColors(numSquares);
     colorValueInSpan.textContent = "RGB";
-    h1.style.backgroundColor = "#232323";
+    h1.style.backgroundColor = "steelblue";
     resultsDisplay.textContent = "";
     resetButton.textContent = "New Colors";
     pcSelectedColor = chooseColor();
