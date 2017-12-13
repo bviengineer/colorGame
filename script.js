@@ -11,12 +11,14 @@ hardButton = document.getElementById("hard-button");
 
 //easy button
 easyButton.addEventListener("click", function(){
-    
+    hardButton.classList.remove("selected");
+    easyButton.classList.add("selected");    
 });
 
 //hard button
 hardButton.addEventListener("click", function(){
-    
+    easyButton.classList.remove("selected");
+    hardButton.classList.add("selected");    
 });
 
 //reset button
@@ -30,6 +32,8 @@ resetButton.addEventListener("click", function(){
     for(var i = 0; i < colorSquares.length; i++){
         colorSquares[i].style.backgroundColor = colors[i];
     }
+
+    //need to add logic to hightlight the easy or hard button depending on which button is clicked 
 });
 
 //Updates the name of the color after the correct guess
