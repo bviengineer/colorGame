@@ -1,6 +1,6 @@
-var colors = generateRandomColors(6);
-
-var colorSquares = document.querySelectorAll(".square"),
+//variables
+var colors = generateRandomColors(6),
+colorSquares = document.querySelectorAll(".square"),
 pcSelectedColor = chooseColor(),
 colorValueInSpan = document.getElementById("color-in-span"),
 resultsDisplay = document.querySelector("#message"),
@@ -13,6 +13,8 @@ hardButton = document.getElementById("hard-button");
 easyButton.addEventListener("click", function(){
     hardButton.classList.remove("selected");
     easyButton.classList.add("selected");    
+    colors = generateRandomColors(3);
+    pcSelectedColor = chooseColor();
 });
 
 //hard button
@@ -74,7 +76,7 @@ function chooseColor(){
     return colors[randomColorSelection];
 }
 
-//function will create an empty array, call another function that generates random colors, push the randomly generated colors to the array one at a time and then return the array of colors
+//function will accept a single argument which reprsesnts the expected size of the array, create an empty array, call another function that generates random colors, push the randomly generated colors to the array one at a time and then return the array of colors
 function generateRandomColors(num){
     var colorsArray = [];
     for(var i = 0; i < num; i++){
