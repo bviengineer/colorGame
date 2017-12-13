@@ -1,5 +1,7 @@
 body {
     background-color: #232323;
+    margin: 0;
+    font-family: "Montserrat", "Avenir";
 }
 
 #container {
@@ -20,6 +22,9 @@ h1{
     color: white;
     text-align: center;
     background-color: steelblue;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 #info-bar {
