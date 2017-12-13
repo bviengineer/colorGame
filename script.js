@@ -17,6 +17,8 @@ easyButton.addEventListener("click", function(){
     numSquares = 3;   
     colors = generateRandomColors(numSquares);
     pcSelectedColor = chooseColor();
+    resultsDisplay.textContent = "";
+    h1.style.backgroundColor = "steelblue";
     for(var i = 0; i < colorSquares.length; i++){
         if(colors[i]){
             colorSquares[i].style.backgroundColor = colors[i];
@@ -33,6 +35,8 @@ hardButton.addEventListener("click", function(){
     numSquares = 6; 
     colors = generateRandomColors(numSquares);
     pcSelectedColor = chooseColor();
+    resultsDisplay.textContent = "";
+    h1.style.backgroundColor = "steelblue";
     for(var i = 0; i < colorSquares.length; i++){
         if(colors[i]){
             colorSquares[i].style.backgroundColor = colors[i];
@@ -57,7 +61,7 @@ resetButton.addEventListener("click", function(){
 });
 
 //Updates the name of the color after the correct guess
-// colorValueInSpan.textContent = pcSelectedColor;
+colorValueInSpan.textContent = pcSelectedColor;
 
 for(var i = 0; i < colorSquares.length; i++){
     //assigns a color to each square
