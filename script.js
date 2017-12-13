@@ -15,6 +15,13 @@ easyButton.addEventListener("click", function(){
     easyButton.classList.add("selected");    
     colors = generateRandomColors(3);
     pcSelectedColor = chooseColor();
+    for(var i = 0; i < colorSquares.length; i++){
+        if(colors[i]){
+            colorSquares[i].style.backgroundColor = colors[i];
+        }else {
+            colorSquares[i].style.display = "none";
+        }
+    }
 });
 
 //hard button
