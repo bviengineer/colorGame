@@ -57,7 +57,6 @@ resetButton.addEventListener("click", function(){
         colorSquares[i].style.backgroundColor = colors[i];
     }
 
-    //need to add logic to hightlight the easy or hard button depending on which button is clicked 
 });
 
 //Updates the name of the color after the correct guess
