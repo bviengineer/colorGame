@@ -10,6 +10,16 @@ resetButton = document.getElementById("reset-button"),
 easyButton = document.getElementById("easy-button"),
 hardButton = document.getElementById("hard-button");
 
+//attempted refactoring
+// gameModeButtons = document.querySelectorAll(".game-mode-btn");
+// for(var i = 0; i < gameModeButtons.length; i++){
+//     gameModeButtons[i].addEventListener("click", function(){
+//         gameModeButtons[0].classList.remove("selected");
+//         gameModeButtons[1].classList.remove("selected");
+//         this.classList.add("selected");
+//     });
+// }
+
 //easy button
 easyButton.addEventListener("click", function(){
     hardButton.classList.remove("selected");
@@ -37,6 +47,7 @@ hardButton.addEventListener("click", function(){
     pcSelectedColor = chooseColor();
     resultsDisplay.textContent = "";
     h1.style.backgroundColor = "steelblue";
+    
     for(var i = 0; i < colorSquares.length; i++){
         if(colors[i]){
             colorSquares[i].style.backgroundColor = colors[i];
